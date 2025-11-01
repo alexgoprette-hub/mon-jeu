@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #222;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+canvas {
+  background: #000;
+  border: 2px solid #444;
+  touch-action: none;
+}
+
+button {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 0.5em 1em;
+  margin: 0.5em;
+  border-radius: 8px;
+}
+
+button:focus {
+  outline: 2px solid yellow;
+}
+#touch-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#touch-controls div {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+#touch-controls button {
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  border-radius: 50%;
+  background: #444;
+  border: 1px solid #777;
+  color: white;
+}
+
+#touch-controls button:focus {
+  outline: 2px solid yellow;
+}
+/* --- Styles canvas / zone de jeu --- */
+/* Assure une belle bordure et fond si le canvas est plus petit que son conteneur */
+#gameCanvas, canvas {
+  display:block;
+  max-width:100%;
+  height:auto;
+  border-radius:6px;
+  background: #155724; /* fond vert sombre */
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.02);
+}
+
+/* Optionnel : amélioration visuelle du wrap */
+.canvas-wrap {
+  background: linear-gradient(180deg,#eaf7ea,#dff2df); /* léger halo autour du canvas */
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
